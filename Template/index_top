@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>ACIS Radiation Correlations</title>
+
+<script language="JavaScript">
+    function MyWindowOpener(imgname) {
+    msgWindow=open("","displayname","toolbar=no,directories=no,menubar=no,location=no,scrollbars=yes,status=no,width=900,height=1100,resize=yes");
+    msgWindow.document.close();
+    msgWindow.document.write("<html><head><title>Radiaton  plot:   "+imgname+"</title></head>");
+    msgWindow.document.write("<body bgcolor='white'>");
+    msgWindow.document.write("<img src='./"+imgname+"' border=0 width=800 height=1000></body></html>");
+    msgWindow.focus();
+}
+</script>
+
+
+</head>
+<body text="#DDDDDD" bgcolor="#000000" link="#FF0000" vlink="#FFFF22" alink="#7500FF" background="../stars.jpg">
+
+<h1><center>ACIS Radiation Correlations</center></h1>
+<ul>
+GOES-13, ACE, EPHIN, and ACIS count rates plotted on the same time scale.
+Also shown on the same timescale is a stripchart of Chandra configuration.
+EPHIN thresholds are shown at 1/3 the RADMON trip levels and
+rad zones are defined as times above these thresholds.<br>
+See also <a href="./rad_time.html">Rad zone timing plots</a>.
+</ul>
+<br/>
+
+<h2>MOST CURRENT DATA:</h2>
+<ul>
+EPHIN and ACIS data are obtained from the standard data pipeline.  
+Therefore this plot lags behind the 
+
+<a href="https://cxc.cfa.harvard.edu/mta/ace.html">most current ACE</a> 
+
+and 
+
+<a href="https://cxc.cfa.harvard.edu/mta/RADIATION/pgplot.gif">most current GOES</a> 
+
+data and may be incomplete.
+</ul>
+<br />
+<a href="javascript:MyWindowOpener('./rad_cnts_curr.gif')">
+<img src="rad_cnts_curr.gif" style='width:45%'>
+</a>
+<a href="javascript:MyWindowOpener('./rad_use_curr.gif')">
+<img src="rad_use_curr.gif" style='width:45%;padding-bottom:70px'>
+</a>
+<h4>(Click the plots above to enlarge.)</h4>
+
+
+<br /><hr /><br />
+
+

@@ -1,0 +1,5 @@
+setenv PYTHONPATH "/proj/sot/ska/arch/x86_64-linux_CentOS-5/lib/python2.7/site-packages:"
+
+/data/mta4/www/DAILY/mta_rad/Rad_scripts/update_html_page.py
+
+mv -f  *.html /data/mta4/www/DAILY/mta_rad/.

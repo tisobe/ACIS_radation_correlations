@@ -1,0 +1,113 @@
+
+############################
+ACIS Radiation Correlations
+############################
+
+This set of scripts creates ACIS radiation related plots. 
+
+
+Scripts
+++++++++
+
+run_rad_wrap_script         ----    a wrapping script to set environment for the script
+
+run_rad_main_script         ----    a main script to run a python script
+
+create_and_run_run_rad.py   ----    this script creates idl control script called
+                                    run_rad.pro and then run it. run_rad.pro provides 
+                                    parameters to mta_rad.pro so that it will read
+                                    data and creates plots
+
+mta_rad.pro                 ----    an idl script to read related data and create plots
+                                    for a given parameter provided by run_rad.pro
+
+mrdfits.pro                 ----    this file contains idl fits manipulation scripts
+
+
+
+update_html_wrap_script     ----    a wrapping script to set environment for the script
+
+update_html_main_script     ----    a main script to run a python script
+
+update_html_page.py         ----    create and/or update html pages
+
++++++++++++++++++++++++
+Environmental Settings
++++++++++++++++++++++++
+
+setenv PYTHONPATH "/proj/sot/ska/arch/x86_64-linux_CentOS-5/lib/python2.7/site-packages:"
+        (done in *main_script)
+
+setenv IDL_PATH "+/data/mta/Script/Ephem/Scripts/:+/usr/local/rsi/user_contrib/astron_Oct09/pro:+/home/mta/IDL:/home/nadams/pros:+/data/swolk/idl_libs:/home/mta/IDL/tara:widget_tools:utilities:event_browser"
+        (done in create_and_run_run_rad.py)
+
+++++++++++++
+Data Needed
+++++++++++++
+
+config_files(**):   '/data/mta_www/mta_temp/mta_states/MJ/<yyyy>/comprehensive_data_summary<yyyy>'
+
+ephfile:            '/data/mta4/www/DAILY/mta_rad/Data/mk_eph_avg_2010.out'
+
+ephscafile:         '/data/mta4/www/DAILY/mta_rad/Data/ephsca.fits' (this file is not updated any more)
+
+ctifile:            '/data/mta4/www/DAILY/mta_rad/cti_data.txt'
+
+goesfile:           '/data/mta4/www/DAILY/mta_rad/goes_data.txt'
+
+acefile:            '/data/mta4/www/DAILY/mta_rad/ace_data.txt'
+
+ephemfile:          '/data/mta/DataSeeker/data/repository/dephem.rdb'
+
++++++++++++++++++++
+HTML page templates
++++++++++++++++++++
+In the directory: ./Template
+
+index_top
+monthly_template
+rad_time_template
+yearly_template
+
+++++++
+Output
+++++++
+
+Directory:      /data/mta4/www/DAILY/mta_rad/
+
+rad_use_curr.gif
+eph_diff_<mmyy>.gif
+rad_cnts_<mmyy>.gif
+rad_use_<mmyy>.gif
+rad_cnts_<yy>.gif
+rad_use_<yy>.gif
+eph_diff_<yy>.gif
+mon_diff_<yy>.gif
+per_diff_<yy>.gif
+mon_per_diff_<yy>.gif
+rad_cnts_last_one_year.gif
+rad_use_last_one_year.gif
+eph_diff_last_one_year.gif
+mon_diff_last_one_year.gif
+per_diff_last_one_year.gif
+mon_per_diff_last_one_year.gif
+rad_cnts_all.gif
+rad_use_all.gif
+eph_diff_all.gif
+mon_diff_all.gif
+per_diff_all.gif
+xper_diff.gif
+
+all<yy>.html
+<mmyy>.html
+rad_time_<mmyy>.html
+index.html
+
++++++++++
+cron jobs
++++++++++
+
+45 1 * * * cd /data/mta4/www/DAILY/mta_rad/Rad_scripts; /data/mta4/www/DAILY/mta_rad/Rad_scripts/run_rad_wrap_script >> $HOME/Logs/run_rad_linux.cron 2>&1
+
+43 1 1 * * cd /data/mta4/www/DAILY/mta_rad/Rad_scripts; /data/mta4/www/DAILY/mta_rad/Rad_scripts/update_html_wrap_script >> $HOME/Logs/rad_html_page_linux.cron 2>&1
+

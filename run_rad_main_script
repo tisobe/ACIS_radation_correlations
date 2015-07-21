@@ -1,0 +1,15 @@
+setenv PYTHONPATH "/proj/sot/ska/arch/x86_64-linux_CentOS-5/lib/python2.7/site-packages:"
+
+/data/mta4/www/DAILY/mta_rad/Rad_scripts/create_and_run_run_rad.py
+
+setascds
+
+setenv IDL_PATH "+/usr/local/rsi/user_contrib/astron_Oct09/pro:+/home/mta/IDL:/home/nadams/pros:+/data/swolk/idl_libs:/home/mta/IDL/tara:widget_tools:utilities:event_browser"
+
+idl /data/mta4/www/DAILY/mta_rad/Rad_scripts/run_rad.pro
+
+mv -f  *.gif /data/mta4/www/DAILY/mta_rad/.
+
+rm -rf  /data/mta4/www/DAILY/mta_rad/Rad_scripts/ccd*.dat
+rm -rf  /data/mta4/www/DAILY/mta_rad/Rad_scripts/radtab.out
+rm -rf  /data/mta4/www/DAILY/mta_rad/Rad_scripts/run_rad..pro

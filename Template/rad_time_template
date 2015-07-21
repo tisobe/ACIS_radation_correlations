@@ -1,0 +1,30 @@
+<HTML>
+<HEAD>
+   <TITLE>Radiation Zone Timing - $#LMONTH#$ $#FYEAR#$  </TITLE>
+</HEAD>
+<BODY TEXT="#DDDDDD" BGCOLOR="#000000" LINK="#FF0000" VLINK="#FFFF22" ALINK="#7500FF" background="../stars.jpg">
+
+<br><br>
+<ul>
+<a href="#radzone">RADZONE</a> - Ephin levels (in any of the E1300,P4GM,P41GM channels) are more than 1/3 of RADMON safing thresholds.<br>
+
+<a href="#radmon">RADMON</a> - Radmon is disabled for radiation zone (for comparison with actual radiation levels).<br>
+
+<!--<a href="#sca">SCA00</a> - Ephin SCA00 channel is saturated (@8372224).<br> -->
+
+<a href="#per">PERIGEE</a> - Time of closest earth approach (for comparison).<br>
+<br>
+</ul>
+<br>
+<br>
+<a name="radzone"></a><img src="eph_diff_$#MONYEAR#$.gif">
+<br><hr><br>
+<a name="radmon"></a><img src="mon_diff_$#MONYEAR#$.gif">
+<br><hr><br>
+<a name="sca"></a><img src="sca_diff_$#MONYEAR#$.gif">
+<br><hr><br>
+<a name="per"></a><img src="per_diff_$#MONYEAR#$.gif">
+<br><hr><br>
+
+</BODY>
+</HTML>

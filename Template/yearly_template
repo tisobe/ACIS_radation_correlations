@@ -1,0 +1,14 @@
+<HTML>
+<HEAD>
+   <TITLE>ACIS Radiation Correlations - $#FYEAR#$ </TITLE>
+</HEAD>
+<BODY TEXT="#DDDDDD" BGCOLOR="#000000" LINK="#FF0000" VLINK="#FFFF22" ALINK="#7500FF" background="../stars.jpg">
+
+See <a href="rad_time_$#SYEAR#$.html">Rad zone timing plots</a>
+<br><hr><br>
+<img src="rad_cnts_$#SYEAR#$.gif">
+<img src="rad_use_$#SYEAR#$.gif">
+
+</BODY>
+</HTML>
+
