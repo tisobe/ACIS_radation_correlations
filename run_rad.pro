@@ -1,4 +1,4 @@
-x = mta_rad('2015:172')
+x = mta_rad('2015:173')
 spawn, 'mv rad_cnts.gif rad_cnts_curr.gif'
 spawn, 'mv rad_use.gif rad_use_curr.gif'
 print, 'Done current'
@@ -19,7 +19,7 @@ spawn, 'mv mon_diff.gif mon_diff_14.gif'
 spawn, 'mv per_diff.gif per_diff_14.gif'
 spawn, 'mv xper_diff.gif mon_per_diff_14.gif'
 print, 'Done 14'
-x = mta_rad('2014:202','2015:202')
+x = mta_rad('2014:203','2015:203')
 spawn, 'mv rad_cnts.gif rad_cnts_last_one_year.gif'
 spawn, 'mv rad_use.gif rad_use_last_one_year.gif'
 spawn, 'mv eph_diff.gif eph_diff_last_one_year.gif'
